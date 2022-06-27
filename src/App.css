@@ -115,5 +115,17 @@
     height: 55%;
     width: 65%;
   }
+  .text {
+
+    text-shadow: 0.3px 0.3px black;
+  }
+  .author {
+
+    text-shadow: 0.3px 0.3px black;
+  }
+  .click {
+
+    text-shadow: 0.3px 0.3px black;
+  }
 
 }
