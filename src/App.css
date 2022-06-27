@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Dosis:wght@200;300;400&family=Karla:wght@200;300;400&family=Poppins:wght@200;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Dosis:wght@200;300;400&family=Karla:wght@200;300;400&family=Poppins:wght@200;400;600&family=The+Nautigal&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+.header {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background-color: rgb(238, 234, 234);
+  display: flex;
+  flex-direction: column;
+  padding: 2.5rem 2.5rem 5rem;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  width: 52%;
+  height: 35%;
+  position: relative;
+  box-shadow: 5px 5px black;
+  border-radius: 30px 0;
+}
+@media screen and (max-width: 850px){
+  .card {
+    height: 45%;
+    border-radius: 0 20px;
+    box-shadow: -5px 5px black;
+  }
+  .click {
+    left: 10px;
+    box-shadow: -5px 5px black;
+  }
+}
+
+@media screen and (max-width: 650px){
+  .card {
+    height: auto;
+  }
+  .click {
+    top:50%;
+    left:-30%;
+  }
+
+}
+
+.text {
+  font-family: 'Dancing Script', cursive;
+  font-size: 3rem;
+  margin: auto;
+  text-shadow: 1px 1px black;
+  
+}
+
+.author {
+  font-family: 'The Nautigal', cursive;
+  font-size: 2.5rem;
+  align-self: flex-end;
+  margin-left: 1rem;
+  padding-left: 2rem;
+  font-weight: 400;
+  text-shadow: 1px 1px black;
+
+  
+}
+
+.click {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  align-self: flex-end;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  border: none;
+  box-shadow: 5px 5px black;
+  text-shadow: 1px 1px black;
+
+}
+
