@@ -32,27 +32,28 @@
 
 .text {
   font-family: 'Dancing Script', cursive;
-  font-size: calc(13px + 2vmin);
+  font-size: calc(.5em + 2vmin);
   margin: auto;
   text-shadow: 1px 1px black;
+  overflow-wrap: break-word;
   
 }
 
 .author {
   font-family: 'The Nautigal', cursive;
-  font-size: 2.5rem;
+  font-size: calc(1em + 2vmin);
   align-self: flex-end;
   margin-left: 1rem;
-  padding-left: 2rem;
+  padding-right: 1rem;
   font-weight: 400;
   text-shadow: 1px 1px black;
-  
+  overflow-wrap: break-word;
   
 }
 
 .click {
-  width: 50px;
-  height: 50px;
+  width: calc(2.5em + 2vmin);
+  height: calc(2.5em + 2vmin);
   border-radius: 50%;
   align-self: flex-end;
   position: absolute;
@@ -80,17 +81,17 @@
   }
   .click {
     left: 10px;
-    width: 40px;
-    height: 40px;
+    /* width: 40em;
+    height: 40em; */
     box-shadow: -5px 5px black;
 
   }
-  .text {
+  /* .text {
     font-size: 1.5rem;
   }
   .author {
     font-size: 1.5rem;
-  }
+  } */
 
 }
 
