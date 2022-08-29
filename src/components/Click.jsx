@@ -1,12 +1,13 @@
+import React from 'react';
 
-const Click = ( {clickN, randomColorN} ) => {
-    
+const Click = (props) => {
     return (
-        <button onClick={clickN} className="click" >
-            <i style={{ color: randomColorN }} className="fa-solid fa-arrow-rotate-left">
+        <button onClick={props.click} className="click" >
+            <i
+                style={{ color: props.randomColor }}
+                className="fa-solid fa-arrow-rotate-left">
             </i>
         </button>
-
     );
 };
 

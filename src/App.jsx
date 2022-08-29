@@ -1,41 +1,47 @@
 import { useState } from 'react'
-import Quotes from './components/Quotes'
+import './assets/App.css'
+import QuoteBox from './components/QuoteBox '
 import Author from './components/Author'
 import Click from './components/Click'
-import './App.css'
-import quotes from './quotes.json'
-import colors from './colors.json'
+import quotes from './assets/quotes.json'
+import colors from './assets/colors.json'
 
 function App() {
-    const randomQ = Math.floor(Math.random() * quotes.length)
-    const randomQuote = quotes[randomQ]
+  const pickRandom = Math.floor(Math.random() * quotes.length)
+  const randomQuote = quotes[pickRandom]
 
-    const randomC = Math.floor(Math.random() * colors.length)
-    const randomColor = colors[randomC].hex
+  const randomC = Math.floor(Math.random() * colors.length)
+  const randomColor = colors[randomC].hex
 
-    const randomText = randomQuote.quoteText
-    const randomAuthor = randomQuote.quoteAuthor
+  const randomText = randomQuote.quote
+  const randomAuthor = randomQuote.author
 
-    const [text, setText] = useState(randomText)
-    const [author, setAuthor] = useState(randomAuthor)
+  const [text, setText] = useState(randomText)
+  const [author, setAuthor] = useState(randomAuthor)
 
+  const click = () => {
 
-    const click = () => {
+    const randomClick = Math.floor(Math.random() * quotes.length)
 
-        const randomClick = Math.floor(Math.random() * quotes.length)
+    setText(quotes[randomClick].quote)
+    setAuthor(quotes[randomClick].author)
+  }
 
-        setText(quotes[randomClick].quoteText)
-        setAuthor(quotes[randomClick].quoteAuthor)
-    }
-
-    return (
-        <header className="header" style={{ backgroundColor: randomColor, color: randomColor }}>
-            <div className="card">
-                <Quotes textN={text} />
-                <Author authorN={author} />
-                <Click clickN={click} randomColorN={randomColor} />
-            </div>
-        </header>
-    )
+  return (
+    <header
+      className="header"
+      style={{ backgroundColor: randomColor, color: randomColor }}
+    >
+      <div className="card">
+        <QuoteBox text={text} />
+        <Author author={author} />
+        <Click
+          click={click}
+          randomColor={randomColor}
+        />
+      </div>
+    </header>
+  )
 }
+
 export default App

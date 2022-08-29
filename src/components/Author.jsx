@@ -1,9 +1,8 @@
 import React from 'react';
 
-const Author = ({ authorN }) => {
-
+const Author = (props) => {
     return (
-        <span className='author'>{authorN}.</span>
+        <span className='author'>{props.author}.</span>
     );
 };
 
